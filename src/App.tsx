@@ -73,7 +73,7 @@ const App: React.FC = () => {
       newBoard = revealCell(newBoard, x, y);
       
       const clickedCell = newBoard[y][x];
-      let newGameStatus = prevState.gameStatus;
+      let newGameStatus: 'playing' | 'won' | 'lost' = prevState.gameStatus;
 
       // Check if clicked on mine
       if (clickedCell.isMine) {
